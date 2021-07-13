@@ -248,28 +248,28 @@ export function OrkutNostalgicIconSet(props) {
   return (
     <OrkutNostalgicIconSet.List>
       {[
-        { name: 'Recados', slug: 'recados', icon: 'book' },
-        { name: 'Fotos', slug: 'fotos', icon: 'camera' },
-        { name: 'Videos', slug: 'videos', icon: 'video-camera' },
-        { name: 'Fãs', slug: 'fas', icon: 'star' },
-        { name: 'Mensagens', slug: 'mensagens', icon: 'email' },
-      ].map(({ name, slug, icon }) => (
+        { name: 'Recados', slug: 'recados', icon: 'book', total: 2 },
+        { name: 'Fotos', slug: 'fotos', icon: 'camera', total: 3 },
+        { name: 'Videos', slug: 'videos', icon: 'video-camera', total: 1 },
+        { name: 'Fãs', slug: 'fas', icon: 'star', total: 5 },
+        { name: 'Mensagens', slug: 'mensagens', icon: 'email', total: 6 },
+      ].map(({ name, slug, icon, total }) => (
         <li key={`orkut__icon_set__${slug}`}>
           <span style={{ gridArea: 'title' }} className="OrkutNostalgicIconSet__title">
             {name}
           </span>
           <span className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
             <img key={`orkut__icon_set__${slug}_img`} className="OrkutNostalgicIconSet__iconSample" src={`https://alurakut.vercel.app/icons/${icon}.svg`} />
-            {props[slug] ? props[slug] : 0}
+            {props[slug] ? props[slug] : total}
           </span>
         </li>
       ))}
       {[
-        { name: 'Confiável', slug: 'confiavel', icon: 'smile' },
-        { name: 'Legal', slug: 'legal', icon: 'cool' },
-        { name: 'Sexy', slug: 'sexy', icon: 'heart' },
-      ].map(({ name, slug, icon }) => {
-        const total = props[slug] ? props[slug] : 2;
+        { name: 'Confiável', slug: 'confiavel', icon: 'smile', rating: 3 },
+        { name: 'Legal', slug: 'legal', icon: 'cool', rating: 3 },
+        { name: 'Sexy', slug: 'sexy', icon: 'heart', rating: 2 },
+      ].map(({ name, slug, icon, rating }) => {
+        const total = props[slug] ? props[slug] : rating;
         return (
           <li key={`orkut__icon_set__${slug}`}>
             <span className="OrkutNostalgicIconSet__title">
