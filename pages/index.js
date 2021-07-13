@@ -17,10 +17,16 @@ export default function Home() {
   const pessoasFavoritas = [
     'juunegreiros',
     'omariosouto',
-    'peas',
+    'leonardoscorza',
     'rafaballerini',
+    'diego3g',
+    'mamsoares2013'
+  ]
+
+    const comunidadesFavoritas = [
     'rocketseat',
-    'filipedeschamps'
+    'OneBitCodeBlog',
+    'devsuperior',
   ]
 
   return (
@@ -48,6 +54,25 @@ export default function Home() {
 
             <ul>
               {pessoasFavoritas.map((itemAtual) => {
+                return (
+                  <li key={itemAtual}>
+                    <a href={`/users/${itemAtual}`} key={itemAtual}>
+                      <img src={`https://github.com/${itemAtual}.png`} />
+                      <span>{itemAtual}</span>
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </ProfileRelationsBoxWrapper>
+
+                    <ProfileRelationsBoxWrapper>
+            <h2 className="smallTitle">
+              Comunidades ({comunidadesFavoritas.length})
+            </h2>
+
+            <ul>
+              {comunidadesFavoritas.map((itemAtual) => {
                 return (
                   <li key={itemAtual}>
                     <a href={`/users/${itemAtual}`} key={itemAtual}>
