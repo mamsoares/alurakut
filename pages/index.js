@@ -13,14 +13,14 @@ function ProfileSidebar(propriedades) {
 }
 
 export default function Home() {
-  const usuarioAleatorio = 'omariosouto';
+  const usuarioAleatorio = 'mamsoares';
   const pessoasFavoritas = [
     'juunegreiros',
     'omariosouto',
     'peas',
     'rafaballerini',
-    'marcobrunodev',
-    'felipefialho'
+    'rocketseat',
+    'filipedeschamps'
   ]
 
   return (
@@ -49,7 +49,7 @@ export default function Home() {
             <ul>
               {pessoasFavoritas.map((itemAtual) => {
                 return (
-                  <li>
+                  <li key={itemAtual}>
                     <a href={`/users/${itemAtual}`} key={itemAtual}>
                       <img src={`https://github.com/${itemAtual}.png`} />
                       <span>{itemAtual}</span>
