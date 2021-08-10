@@ -14,7 +14,7 @@ Seja bem vindo ao projeto Alurakut !!! Passos fundamentais:
 - Adicione a tag "alurakut" e a tag "imersao-react" - OK
 - E pronto!
 
-## Onde está o Layout base?
+## Onde está o Layout base ?
 
 - [Link](https://www.figma.com/file/xHF0n0qxiE2rqjqAILiBUB/Alurakut?node-id=58%3A0)
 
